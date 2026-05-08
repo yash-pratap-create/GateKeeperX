@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <!-- Glowing radial gradients per node cluster -->
+    <radialGradient id="glow-indigo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#6366f1" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-purple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#8b5cf6" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#06b6d4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur-soft">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Base canvas -->
+  <rect width="1200" height="800" fill="#eef4ff"/>
+
+  <!-- ── Large ambient glow orbs ── -->
+  <ellipse cx="160"  cy="150"  rx="220" ry="180" fill="url(#glow-indigo)"/>
+  <ellipse cx="960"  cy="600"  rx="260" ry="210" fill="url(#glow-blue)"/>
+  <ellipse cx="1060" cy="110"  rx="190" ry="150" fill="url(#glow-purple)"/>
+  <ellipse cx="80"   cy="680"  rx="200" ry="160" fill="url(#glow-blue)"/>
+  <ellipse cx="600"  cy="380"  rx="280" ry="220" fill="url(#glow-indigo)"/>
+  <ellipse cx="850"  cy="220"  rx="160" ry="130" fill="url(#glow-cyan)"/>
+  <ellipse cx="350"  cy="650"  rx="180" ry="140" fill="url(#glow-purple)"/>
+
+  <!-- ── Network connection lines ── -->
+  <!-- Primary network spine -->
+  <line x1="100"  y1="180"  x2="340"  y2="280"  stroke="#6366f1" stroke-opacity="0.20" stroke-width="1.4"/>
+  <line x1="340"  y1="280"  x2="560"  y2="200"  stroke="#3b82f6" stroke-opacity="0.18" stroke-width="1.2"/>
+  <line x1="560"  y1="200"  x2="780"  y2="280"  stroke="#6366f1" stroke-opacity="0.18" stroke-width="1.4"/>
+  <line x1="780"  y1="280"  x2="1000" y2="180"  stroke="#3b82f6" stroke-opacity="0.20" stroke-width="1.2"/>
+  <line x1="1000" y1="180"  x2="1120" y2="260"  stroke="#8b5cf6" stroke-opacity="0.18" stroke-width="1.0"/>
+
+  <!-- Cross-connections -->
+  <line x1="340"  y1="280"  x2="420"  y2="460"  stroke="#8b5cf6" stroke-opacity="0.16" stroke-width="1.0"/>
+  <line x1="420"  y1="460"  x2="620"  y2="520"  stroke="#6366f1" stroke-opacity="0.20" stroke-width="1.4"/>
+  <line x1="620"  y1="520"  x2="840"  y2="460"  stroke="#3b82f6" stroke-opacity="0.18" stroke-width="1.2"/>
+  <line x1="840"  y1="460"  x2="1000" y2="180"  stroke="#6366f1" stroke-opacity="0.16" stroke-width="1.0"/>
+  <line x1="780"  y1="280"  x2="620"  y2="520"  stroke="#8b5cf6" stroke-opacity="0.14" stroke-width="0.9"/>
+  <line x1="560"  y1="200"  x2="420"  y2="460"  stroke="#3b82f6" stroke-opacity="0.14" stroke-width="0.9"/>
+
+  <!-- Lower network -->
+  <line x1="100"  y1="600"  x2="280"  y2="680"  stroke="#6366f1" stroke-opacity="0.16" stroke-width="1.0"/>
+  <line x1="280"  y1="680"  x2="420"  y2="460"  stroke="#3b82f6" stroke-opacity="0.16" stroke-width="1.0"/>
+  <line x1="420"  y1="460"  x2="280"  y2="680"  stroke="#8b5cf6" stroke-opacity="0.14" stroke-width="0.8"/>
+  <line x1="280"  y1="680"  x2="620"  y2="720"  stroke="#6366f1" stroke-opacity="0.16" stroke-width="1.0"/>
+  <line x1="620"  y1="720"  x2="840"  y2="460"  stroke="#3b82f6" stroke-opacity="0.16" stroke-width="1.0"/>
+  <line x1="620"  y1="720"  x2="900"  y2="700"  stroke="#8b5cf6" stroke-opacity="0.14" stroke-width="0.8"/>
+  <line x1="900"  y1="700"  x2="1120" y2="620"  stroke="#6366f1" stroke-opacity="0.16" stroke-width="1.0"/>
+  <line x1="1120" y1="620"  x2="840"  y2="460"  stroke="#3b82f6" stroke-opacity="0.14" stroke-width="0.9"/>
+
+  <!-- Additional diagonal connections -->
+  <line x1="100"  y1="180"  x2="100"  y2="600"  stroke="#8b5cf6" stroke-opacity="0.14" stroke-width="0.8"/>
+  <line x1="1120" y1="260"  x2="1120" y2="620"  stroke="#3b82f6" stroke-opacity="0.14" stroke-width="0.8"/>
+  <line x1="560"  y1="200"  x2="620"  y2="520"  stroke="#06b6d4" stroke-opacity="0.12" stroke-width="0.8"/>
+  <line x1="160"  y1="400"  x2="340"  y2="280"  stroke="#6366f1" stroke-opacity="0.12" stroke-width="0.7"/>
+  <line x1="160"  y1="400"  x2="100"  y2="600"  stroke="#6366f1" stroke-opacity="0.12" stroke-width="0.7"/>
+  <line x1="1040" y1="400"  x2="840"  y2="460"  stroke="#3b82f6" stroke-opacity="0.12" stroke-width="0.7"/>
+  <line x1="1040" y1="400"  x2="1000" y2="180"  stroke="#3b82f6" stroke-opacity="0.12" stroke-width="0.7"/>
+  <line x1="1040" y1="400"  x2="1120" y2="620"  stroke="#8b5cf6" stroke-opacity="0.12" stroke-width="0.7"/>
+
+  <!-- ── Network nodes (glow halo + solid core) ── -->
+  <!-- Large hub node — center -->
+  <circle cx="620"  cy="520"  r="22" fill="#3b82f6" fill-opacity="0.10" filter="url(#blur-soft)"/>
+  <circle cx="620"  cy="520"  r="7"  fill="#3b82f6" fill-opacity="0.65"/>
+
+  <!-- Node: top-left -->
+  <circle cx="100"  cy="180"  r="16" fill="#6366f1" fill-opacity="0.12"/>
+  <circle cx="100"  cy="180"  r="5"  fill="#6366f1" fill-opacity="0.60"/>
+
+  <!-- Node: mid-left -->
+  <circle cx="340"  cy="280"  r="20" fill="#3b82f6" fill-opacity="0.12"/>
+  <circle cx="340"  cy="280"  r="6"  fill="#3b82f6" fill-opacity="0.68"/>
+
+  <!-- Node: top-center -->
+  <circle cx="560"  cy="200"  r="14" fill="#8b5cf6" fill-opacity="0.12"/>
+  <circle cx="560"  cy="200"  r="4.5" fill="#8b5cf6" fill-opacity="0.58"/>
+
+  <!-- Node: upper-right -->
+  <circle cx="780"  cy="280"  r="18" fill="#6366f1" fill-opacity="0.12"/>
+  <circle cx="780"  cy="280"  r="6"  fill="#6366f1" fill-opacity="0.62"/>
+
+  <!-- Node: top-right -->
+  <circle cx="1000" cy="180"  r="14" fill="#3b82f6" fill-opacity="0.12"/>
+  <circle cx="1000" cy="180"  r="5"  fill="#3b82f6" fill-opacity="0.58"/>
+
+  <!-- Node: far right top -->
+  <circle cx="1120" cy="260"  r="11" fill="#8b5cf6" fill-opacity="0.10"/>
+  <circle cx="1120" cy="260"  r="3.5" fill="#8b5cf6" fill-opacity="0.52"/>
+
+  <!-- Node: center-left hub -->
+  <circle cx="420"  cy="460"  r="18" fill="#6366f1" fill-opacity="0.12"/>
+  <circle cx="420"  cy="460"  r="6"   fill="#6366f1" fill-opacity="0.65"/>
+
+  <!-- Node: center-right -->
+  <circle cx="840"  cy="460"  r="16" fill="#8b5cf6" fill-opacity="0.12"/>
+  <circle cx="840"  cy="460"  r="5"  fill="#8b5cf6" fill-opacity="0.60"/>
+
+  <!-- Node: left edge mid -->
+  <circle cx="160"  cy="400"  r="11" fill="#3b82f6" fill-opacity="0.10"/>
+  <circle cx="160"  cy="400"  r="3.5" fill="#3b82f6" fill-opacity="0.50"/>
+
+  <!-- Node: right edge mid -->
+  <circle cx="1040" cy="400"  r="12" fill="#6366f1" fill-opacity="0.10"/>
+  <circle cx="1040" cy="400"  r="4"  fill="#6366f1" fill-opacity="0.52"/>
+
+  <!-- Node: bottom-left -->
+  <circle cx="100"  cy="600"  r="13" fill="#8b5cf6" fill-opacity="0.10"/>
+  <circle cx="100"  cy="600"  r="4"  fill="#8b5cf6" fill-opacity="0.55"/>
+
+  <!-- Node: lower-left -->
+  <circle cx="280"  cy="680"  r="16" fill="#3b82f6" fill-opacity="0.10"/>
+  <circle cx="280"  cy="680"  r="5"  fill="#3b82f6" fill-opacity="0.58"/>
+
+  <!-- Node: bottom-center -->
+  <circle cx="620"  cy="720"  r="14" fill="#6366f1" fill-opacity="0.10"/>
+  <circle cx="620"  cy="720"  r="4.5" fill="#6366f1" fill-opacity="0.55"/>
+
+  <!-- Node: lower-right -->
+  <circle cx="900"  cy="700"  r="12" fill="#8b5cf6" fill-opacity="0.10"/>
+  <circle cx="900"  cy="700"  r="4"  fill="#8b5cf6" fill-opacity="0.52"/>
+
+  <!-- Node: bottom-right -->
+  <circle cx="1120" cy="620"  r="14" fill="#3b82f6" fill-opacity="0.10"/>
+  <circle cx="1120" cy="620"  r="5"  fill="#3b82f6" fill-opacity="0.58"/>
+
+  <!-- Accent mini nodes (data pulses look) -->
+  <circle cx="460"  cy="340"  r="2.5" fill="#06b6d4" fill-opacity="0.45"/>
+  <circle cx="700"  cy="390"  r="2.5" fill="#06b6d4" fill-opacity="0.45"/>
+  <circle cx="200"  cy="530"  r="2"   fill="#3b82f6" fill-opacity="0.40"/>
+  <circle cx="980"  cy="540"  r="2"   fill="#6366f1" fill-opacity="0.40"/>
+  <circle cx="760"  cy="640"  r="2.5" fill="#8b5cf6" fill-opacity="0.40"/>
+</svg>
